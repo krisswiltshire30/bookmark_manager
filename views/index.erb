@@ -1,4 +1,15 @@
 <header>Bookmark Manager</header>
+
+<ol>
+  <% @all_bookmarks.each do |bookmark| %>
+   <li><a href="<%= bookmark.url%>">
+     <%= bookmark.title %></a></li>
+  <%end%>
+</ol>
+
 <form action="/bookmarks/new">
   <input type="submit" value="Add bookmark">
+</form>
+<form action="/bookmarks/delete">
+  <input type="submit" value="Delete bookmark">
 </form>

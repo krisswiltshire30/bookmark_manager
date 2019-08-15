@@ -8,6 +8,4 @@ feature 'Testing bookmark route' do
     expect(page).to have_content 'test2'
     expect(page).to have_content 'test3'
   end
-
-
 end

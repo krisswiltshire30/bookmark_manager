@@ -49,8 +49,6 @@
         1,
         1,
         null,
-        null,
-        null,
         null
       ],
       "/Users/Kriss/Desktop/Ruby/projects/bookmark_manager/spec/database_helper.rb": [
@@ -61,6 +59,22 @@
         1,
         1,
         1,
+        null
+      ],
+      "/Users/Kriss/Desktop/Ruby/projects/bookmark_manager/spec/feature/delete_bookmark_spec.rb": [
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Kriss/Desktop/Ruby/projects/bookmark_manager/spec/feature/index_spec.rb": [
@@ -74,6 +88,6 @@
         null
       ]
     },
-    "timestamp": 1565876647
+    "timestamp": 1565886345
   }
 }

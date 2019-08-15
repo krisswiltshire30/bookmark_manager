@@ -31,9 +31,14 @@ class Bookmark
                  end
     connection.exec("INSERT INTO bookmarks (title, url) VALUES ('#{title}','#{url}');")
   end
-end
 
-all_bookmarks = Bookmark.all
-all_bookmarks.each do |bookmark|
-   bookmark.id
+  def self.delete(title)
+    connection = if ENV['ENVIRONMENT'] == 'test'
+                   PG.connect(dbname: 'bookmark_manager_test')
+                 else
+                   PG.connect(dbname: 'bookmark_manager')
+                 end
+    connection.exec("DELETE FROM bookmarks WHERE title='#{title}';")
+  end
+
 end
