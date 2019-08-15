@@ -1,9 +1,12 @@
-<center><h1>Bookmark Manager</h1>
+<center>
+  <h1>Bookmark Manager</h1>
   <h4>Current Bookmarks</h4>
-<ol style="list-style: none;margin:0;padding:0">
-  <% @all_bookmarks.each do |bookmark| %>
-   <li><a href="<%= bookmark.url%>">
-     <%= bookmark.title %></a></li>
-  <%end%>
-</ol>
+  <ol style="list-style: none;margin:0;padding:0">
+    <% @all_bookmarks.each do |bookmark| %>
+      <li>
+        <a href="<%= bookmark.url%>">
+          <%= bookmark.title %></a>
+      </li>
+    <%end%>
+  </ol>
 </center>

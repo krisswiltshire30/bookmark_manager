@@ -1,27 +1,28 @@
-<center><h1>Update Bookmark</h1>
+<center>
+  <h1>Update Bookmark</h1>
   <h4>Current Bookmarks</h4>
-<ol style="list-style: none;margin:0;padding:0">
-  <% @all_bookmarks.each do |bookmark| %>
-   <li><a href="<%= bookmark.url%>">
-     <%= bookmark.title %></a></li>
-  <%end%>
-</ol>
+  <ol style="list-style: none;margin:0;padding:0">
+    <% @all_bookmarks.each do |bookmark| %>
+      <li>
+        <a href="<%= bookmark.url%>">
+          <%= bookmark.title %></a>
+      </li>
+    <%end%>
+  </ol>
 
-
-
-<h2>---------------------------------------------------</h2>
-<h3>Change bookmark url</h3>
-<form action="/update_url" method="post">
-<input type="text" name="title1" placeholder="Enter bookmark name">
-<input type="text" name="update_url" placeholder="Enter new url">
-<input type="submit" value="Update url">
-</form>
-<h2>---------------------------------------------------</h2>
-<form action="/update_title" method="post">
-<h3>Change bookmark title</h3>
-<input type="text" name="title2" placeholder="Enter bookmark name">
-<input type="text" name="new_title" placeholder="Enter new title">
-<input type="submit" value="Update title">
-</form>
-<h2>---------------------------------------------------</h2>
+  <h2>---------------------------------------------------</h2>
+  <h3>Change bookmark url</h3>
+  <form action="/update_url" method="post">
+    <input type="text" name="title1" placeholder="Enter bookmark name">
+    <input type="text" name="update_url" placeholder="Enter new url">
+    <input type="submit" value="Update url">
+  </form>
+  <h2>---------------------------------------------------</h2>
+  <form action="/update_title" method="post">
+    <h3>Change bookmark title</h3>
+    <input type="text" name="title2" placeholder="Enter bookmark name">
+    <input type="text" name="new_title" placeholder="Enter new title">
+    <input type="submit" value="Update title">
+  </form>
+  <h2>---------------------------------------------------</h2>
 </center>

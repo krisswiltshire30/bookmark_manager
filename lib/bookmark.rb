@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require 'pg'
 require_relative 'connection_helper.rb'
@@ -20,8 +21,8 @@ class Bookmark
     end
 
   def self.add(title:, url:)
-     connection = db_connection_setup
-     connection.exec("INSERT INTO bookmarks (title, url) VALUES ('#{title}','#{url}');")
+    connection = db_connection_setup
+    connection.exec("INSERT INTO bookmarks (title, url) VALUES ('#{title}','#{url}');")
   end
 
   def self.delete(title)
@@ -29,7 +30,7 @@ class Bookmark
     connection.exec("DELETE FROM bookmarks WHERE title='#{title}';")
   end
 
-  def self.update_url(title, url=0)
+  def self.update_url(title, url = 0)
     connection = db_connection_setup
     connection.exec("UPDATE bookmarks SET url = '#{url}' WHERE title = '#{title}';")
   end

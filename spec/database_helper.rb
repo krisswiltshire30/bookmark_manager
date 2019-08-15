@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 def open_test_db
   connection = PG.connect(dbname: 'bookmark_manager_test')

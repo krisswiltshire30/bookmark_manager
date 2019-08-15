@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # As a user
 # So I can remove my bookmark from Bookmark Manager
 # I want to delete a bookmark

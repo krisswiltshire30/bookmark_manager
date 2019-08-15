@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require 'sinatra/base'
 require './lib/bookmark'
@@ -52,5 +53,4 @@ class BookmarkManager < Sinatra::Base
     @all_bookmarks = Bookmark.all
     erb :bookmarks
   end
-
 end

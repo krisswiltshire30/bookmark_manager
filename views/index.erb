@@ -1,24 +1,26 @@
-
-<center><h1>Bookmark Manager</h1>
+<center>
+  <h1>Bookmark Manager</h1>
   <h4>Current Bookmarks</h4>
-<ol style="list-style: none;margin:0;padding:0">
-  <% @all_bookmarks.each do |bookmark| %>
-   <li><a href="<%= bookmark.url%>">
-     <%= bookmark.title %></a></li>
-  <%end%>
-</ol>
-<h2>---------------------------------------------------</h2>
-<h3>Options</h3>
-<form action="/bookmarks/new">
-  <input type="submit" value="Add">
-</form>
+  <ol style="list-style: none;margin:0;padding:0">
+    <% @all_bookmarks.each do |bookmark| %>
+      <li>
+        <a href="<%= bookmark.url%>">
+          <%= bookmark.title %></a>
+      </li>
+    <%end%>
+  </ol>
+  <h2>---------------------------------------------------</h2>
+  <h3>Options</h3>
+  <form action="/bookmarks/new">
+    <input type="submit" value="Add">
+  </form>
 
-<form action="/bookmarks/delete">
-  <input type="submit" value="Delete">
-</form>
+  <form action="/bookmarks/delete">
+    <input type="submit" value="Delete">
+  </form>
 
-<form action="/bookmarks/update">
-  <input type="submit" value="Update">
-</form>
-<h2>---------------------------------------------------</h2>
+  <form action="/bookmarks/update">
+    <input type="submit" value="Update">
+  </form>
+  <h2>---------------------------------------------------</h2>
 </center>
