@@ -1,0 +1,24 @@
+<ol>
+  <% @all_bookmarks.each do |bookmark| %>
+   <li><a href="<%= bookmark.url%>">
+     <%= bookmark.title %></a></li>
+  <%end%>
+</ol>
+
+<center>
+<h2>---------------------------------------------------</h2>
+<h3>Change bookmark url</h3>
+<form action="/update_url" method="post">
+<input type="text" name="title1" placeholder="Enter bookmark name">
+<input type="text" name="update_url" placeholder="Enter new url">
+<input type="submit" value="Update url">
+</form>
+<h2>---------------------------------------------------</h2>
+<form action="/update_title" method="post">
+<h3>Change bookmark title</h3>
+<input type="text" name="title2" placeholder="Enter bookmark name">
+<input type="text" name="new_title" placeholder="Enter new title">
+<input type="submit" value="Update title">
+</form>
+<h2>---------------------------------------------------</h2>
+</center>
