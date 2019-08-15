@@ -2,10 +2,8 @@
   "RSpec": {
     "coverage": {
       "/Users/Kriss/Desktop/Ruby/projects/bookmark_manager/spec/bookmark_spec.rb": [
-        1,
-        1,
-        1,
-        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -14,7 +12,12 @@
         1,
         null,
         1,
+        1,
+        1,
         null,
+        1,
+        null,
+        1,
         1,
         1,
         1,
@@ -30,24 +33,34 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null
       ],
       "/Users/Kriss/Desktop/Ruby/projects/bookmark_manager/spec/feature/bookmark_view_spec.rb": [
         1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
         null,
         1,
         null,
         1,
         1,
         1,
+        1,
+        1,
         null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Kriss/Desktop/Ruby/projects/bookmark_manager/spec/database_helper.rb": [
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/Kriss/Desktop/Ruby/projects/bookmark_manager/spec/feature/index_spec.rb": [
@@ -61,6 +74,6 @@
         null
       ]
     },
-    "timestamp": 1565716076
+    "timestamp": 1565876647
   }
 }
