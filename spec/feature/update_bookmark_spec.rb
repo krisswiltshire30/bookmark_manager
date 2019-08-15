@@ -6,7 +6,7 @@ feature 'Update a bookmark' do
     connection = PG.connect(dbname: 'bookmark_manager_test')
     connection.exec("INSERT INTO bookmarks (id,title,url) VALUES (5, 'test5', 'http://www.makersacademy.com');")
     visit '/'
-    click_button('Update bookmark')
+    click_button('Update')
     fill_in('title1', with: 'test5')
     fill_in('update_url', with: 'http://www.google.com')
     click_button('Update url')
@@ -17,7 +17,7 @@ feature 'Update a bookmark' do
     connection = PG.connect(dbname: 'bookmark_manager_test')
     connection.exec("INSERT INTO bookmarks (id,title,url) VALUES (6, 'test6', 'http://www.makersacademy.com');")
     visit '/'
-    click_button('Update bookmark')
+    click_button('Update')
     fill_in('title2', with: 'test6')
     fill_in('new_title', with: 'a_new_title')
     click_button('Update title')

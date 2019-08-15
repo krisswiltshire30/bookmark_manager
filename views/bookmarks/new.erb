@@ -1,6 +1,17 @@
-<header>Bookmark Manager</header>
+<center><h1>Create New Bookmark</h1>
+  <h4>Current Bookmarks</h4>
+<ol style="list-style: none;margin:0;padding:0">
+  <% @all_bookmarks.each do |bookmark| %>
+   <li><a href="<%= bookmark.url%>">
+     <%= bookmark.title %></a></li>
+  <%end%>
+</ol>
+<h2>---------------------------------------------------</h2>
+<h3>Enter the Title and URL to add a bookmark</h3>
 <form action="/input" method="post">
   <input type="text" name="title" placeholder="Title">
   <input type="text" name="url" placeholder="URL">
 <input type="submit" value="Submit">
 </form>
+<h2>---------------------------------------------------</h2>
+</center>

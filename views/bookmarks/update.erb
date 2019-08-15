@@ -1,11 +1,14 @@
-<ol>
+<center><h1>Update Bookmark</h1>
+  <h4>Current Bookmarks</h4>
+<ol style="list-style: none;margin:0;padding:0">
   <% @all_bookmarks.each do |bookmark| %>
    <li><a href="<%= bookmark.url%>">
      <%= bookmark.title %></a></li>
   <%end%>
 </ol>
 
-<center>
+
+
 <h2>---------------------------------------------------</h2>
 <h3>Change bookmark url</h3>
 <form action="/update_url" method="post">

@@ -1,11 +1,16 @@
-<ol>
+<center><h1>Delete Bookmark</h1>
+  <h4>Current Bookmarks</h4>
+<ol style="list-style: none;margin:0;padding:0">
   <% @all_bookmarks.each do |bookmark| %>
    <li><a href="<%= bookmark.url%>">
      <%= bookmark.title %></a></li>
   <%end%>
 </ol>
-
-<form action="/delete_title" method="post">
-<input type="text" name="delete" placeholder="Which title to delete?">
+<h2>---------------------------------------------------</h2>
+<form action="/delete_bookmark" method="post">
+  <h3>Which bookmark would you like to delete?</h3>
+<input type="text" name="delete" placeholder="Input title here">
 <input type="submit" value="Delete">
 </form>
+<h2>---------------------------------------------------</h2>
+</center>
