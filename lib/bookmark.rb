@@ -35,4 +35,6 @@ class Bookmark
   def self.update_title(title1, title2)
     DatabaseConnection.query("UPDATE bookmarks SET title = '#{title2}' WHERE title = '#{title1}';")
   end
+
+
 end

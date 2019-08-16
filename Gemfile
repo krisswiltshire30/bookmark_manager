@@ -13,3 +13,5 @@ gem 'rubocop'
 gem 'simplecov'
 gem 'simplecov-console'
 gem 'sinatra', '2.0.5'
+
+gem 'sinatra-flash', '0.3.0'

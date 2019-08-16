@@ -1,11 +1,14 @@
-# frozen_string_literal: true
 
 require 'sinatra/base'
+require 'sinatra'
+require 'sinatra/flash'
 require './lib/bookmark'
 require './lib/connection_helper.rb'
+require 'uri'
 
 class BookmarkManager < Sinatra::Base
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
     @all_bookmarks = Bookmark.all
@@ -17,8 +20,12 @@ class BookmarkManager < Sinatra::Base
     erb :'/bookmarks/new'
   end
 
-  post '/input' do
-    Bookmark.add(title: params[:title], url: params[:url])
+  post '/add_bookmark' do
+    if params['url'] =~ /\A#{URI.regexp(%w[http https])}\z/
+      Bookmark.add(title: params[:title], url: params[:url])
+    else
+      flash[:notice] = 'You must submit a VALID url'
+    end
     redirect '/'
   end
 
@@ -29,8 +36,10 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/update_url' do
-    Bookmark.update_url(params[:title1], params[:update_url])
-    "update #{params[:title1]} url to #{params[:update_url]}"
+    if params['update_url'] =~ /\A#{URI.regexp(%w[http https])}\z/
+      Bookmark.update_url(params[:title1], params[:update_url])    else
+      flash[:notice] = 'You must submit a VALID url'
+    end
     redirect '/'
   end
 
