@@ -28,6 +28,8 @@
       "/Users/Kriss/Desktop/Ruby/projects/bookmark_manager/spec/feature/add_bookmark_spec.rb": [
         null,
         null,
+        null,
+        null,
         1,
         1,
         1,
@@ -43,6 +45,8 @@
         null,
         null,
         1,
+        null,
+        null,
         null,
         1,
         1,
@@ -124,6 +128,6 @@
         null
       ]
     },
-    "timestamp": 1565903522
+    "timestamp": 1565945129
   }
 }

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'pg'
+require './lib/database_connection'
 require_relative 'connection_helper.rb'
 
 class Bookmark
@@ -13,30 +14,25 @@ class Bookmark
   end
 
   def self.all
-    connection = db_connection_setup
-    result = connection.exec('SELECT * FROM bookmarks;')
+    result = DatabaseConnection.query('SELECT * FROM bookmarks;')
     result.map do |bookmark|
       Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     end
     end
 
   def self.add(title:, url:)
-    connection = db_connection_setup
-    connection.exec("INSERT INTO bookmarks (title, url) VALUES ('#{title}','#{url}');")
+    DatabaseConnection.query("INSERT INTO bookmarks (title, url) VALUES ('#{title}','#{url}');")
   end
 
   def self.delete(title)
-    connection = db_connection_setup
-    connection.exec("DELETE FROM bookmarks WHERE title='#{title}';")
+    DatabaseConnection.query("DELETE FROM bookmarks WHERE title='#{title}';")
   end
 
   def self.update_url(title, url = 0)
-    connection = db_connection_setup
-    connection.exec("UPDATE bookmarks SET url = '#{url}' WHERE title = '#{title}';")
+    DatabaseConnection.query("UPDATE bookmarks SET url = '#{url}' WHERE title = '#{title}';")
   end
 
   def self.update_title(title1, title2)
-    connection = db_connection_setup
-    connection.exec("UPDATE bookmarks SET title = '#{title2}' WHERE title = '#{title1}';")
+    DatabaseConnection.query("UPDATE bookmarks SET title = '#{title2}' WHERE title = '#{title1}';")
   end
 end

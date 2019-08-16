@@ -1,5 +1,7 @@
 # frozen_string_literal: true
-
+# As a user
+# So I can access my most visited websites
+# I want to add a bookmark
 feature 'add a bookmark' do
   scenario 'It should add a bookmark the list' do
     visit '/'

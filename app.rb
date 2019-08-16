@@ -2,6 +2,7 @@
 
 require 'sinatra/base'
 require './lib/bookmark'
+require './lib/connection_helper.rb'
 
 class BookmarkManager < Sinatra::Base
   enable :sessions
