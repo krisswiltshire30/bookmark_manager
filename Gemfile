@@ -12,6 +12,6 @@ gem 'rspec', '3.8.0'
 gem 'rubocop'
 gem 'simplecov'
 gem 'simplecov-console'
-gem 'sinatra', '2.0.5'
+gem 'sinatra', '2.2.3'
 
 gem 'sinatra-flash', '0.3.0'
